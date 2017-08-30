@@ -15,5 +15,9 @@
   "license": "MIT",
   "devDependencies": {
     "electron-prebuilt": "^0.33.3"
+  },
+  "dependencies": {
+    "electron": "^1.7.5",
+    "node-dir": "^0.1.17"
   }
 }
