@@ -54,7 +54,7 @@ $('.f-form').on('submit', function() {
   var formData = JSON.stringify($(".f-form").serializeObject());
 
   dialog.showSaveDialog({
-    defaultPath: '/home/shreya/json/untitled.json',
+    defaultPath: __dirname + '/json/untitled.json',
     filters: [{name: 'JSON files', extensions: ['json']}]}, function (fileName) {
 
     if (fileName === undefined) return;
@@ -98,7 +98,7 @@ document.getElementById('get_data').addEventListener('click', function() {
 
 document.getElementById('list-files').addEventListener('click', function() {
 
-  const files = '/home/shreya/json/';
+  const files = __dirname + '/json/';
   var dict = [];
   var i = 0;
   var j = 0;

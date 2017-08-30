@@ -4,8 +4,8 @@ const {app, BrowserWindow} = electron
 app.on('ready', function() {
 
  var mainWindow = new BrowserWindow({
-    width: 600,
-    height: 300,
+    width: 1000,
+    height: 900,
     'min-width': 500,
     'min-height': 200,
     'accept-first-mouse': true,
