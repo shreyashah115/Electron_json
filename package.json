@@ -1,0 +1,19 @@
+{
+  "name": "electron-json",
+  "version": "1.0.0",
+  "author": "Speedy",
+  "keywords": [
+    "photon",
+    "html",
+    "css",
+    "electron"
+  ],
+  "style": "dist/css/photon.css",
+  "scripts": {
+    "start": "electron dist"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron-prebuilt": "^0.33.3"
+  }
+}

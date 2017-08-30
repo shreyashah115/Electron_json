@@ -1,0 +1,10 @@
+{
+  "name": "electron-json",
+  "version": "1.0.0",
+  "description": "A simple app to store and retrive json data",
+  "main": "app.js",
+  "author": "Speedy",
+  "scripts": {
+    "start": "electron ."
+  }
+}
