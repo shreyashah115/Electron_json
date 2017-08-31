@@ -51,26 +51,22 @@ $.fn.serializeObject = function(){
 };
 
 $('.f-form').on('submit', function() {
-  var formData = JSON.stringify($(".f-form").serializeObject());
+  var jsonData = $(".f-form").serializeObject();
+  var formData = JSON.stringify(jsonData);
 
-  dialog.showSaveDialog({
-    defaultPath: __dirname + '/json/untitled.json',
-    filters: [{name: 'JSON files', extensions: ['json']}]}, function (fileName) {
+  // dialog.showSaveDialog({
+    // defaultPath: __dirname + '/json/untitled.json',
+    // filters: [{name: 'JSON files', extensions: ['json']}]}, function (fileName) {
 
-    if (fileName === undefined) return;
-
+    // if (fileName === undefined) return;
+    fileName = __dirname + '/json/' + jsonData.title +'.json';
     fs.writeFile(fileName, formData, function (err) {   
        dialog.showMessageBox({ message: "The file has been saved.", buttons: ["OK"] });
     });
 
-  });
+  // });
   $('.f-form')[0].reset();
 
-  return false;
-});
-
-document.getElementById('clear').addEventListener('click', function() {
-  $('.f-form')[0].reset();
   return false;
 });
 
